@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorkCloud - Your Path to Productivity and Success</title>
+  <link rel="shortcut icon" href="img/wc.jpg" type="image/x-icon">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="css/home.css" rel="stylesheet">
+  <link href="css/members.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- 'boxicons'Using the Web -->
+  <link href='https://unpkg.com/boxicons@2.1.4/dist/boxicons.js' rel='stylesheet'>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- font style -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans">
+
+</head>
+
+<body>
+
+
+  <!-- menubar start -->
+  <header>
+    <nav class="menubar d-flex justify-content-around">
+      <div class="logo">
+        <img src="img/wc.jpg" alt="WorkCloud">
+      </div>
+      <div class="nav">
+        <div id="navbar">
+          <ul id="myLinks">
+            <li class="pLink"><a class="lk" href="#About">About</a></li>
+            <li class="pLink"><a class="lk" href="#Services">Services</a></li>
+            <li class="pLink"><a class="lk" href="#Career">Career</a></li>
+            <li class="pLink"><a class="lk" href="#Contact">Contact</a></li>
+            <li class="pLink"><a class="lk" href="#Testimonials">Testimonials</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="toggle">
+        <i class="glyphicon glyphicon-tasks come" id="t1" onclick="showt1()"></i>
+        <i class="glyphicon glyphicon-remove-sign go" id="t2" onclick="showt2()"></i>
+      </div>
+    </nav>
+  </header>
+  <!-- menubar close -->
+
+  <div class="main">
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Empower Your Business with WorkCloud</h1>
+        <p>We believe in transforming the way businesses operate by providing innovative and cutting-edge solutions. Let
+          us take care of productivity, while you focus on success.</p>
+        <a href="#" onclick="showLogForm()" class="cta-button" style="text-decoration: none;">Start Free Trial</a>
+      </div>
+    </section>
+
+
+
+  </div>
+
+  <!-- menubar close  -->
+
+  <!-- signup form -->
+  <div id="modalSignForm" class="container-form p-2 modal-lg">
+    <div class="d-flex justify-content-between">
+      <div class="">
+        <h4 class="m-2 pt-2">Sign-Up with WorkCloud</h4>
+      </div>
+      <div id="cross" class=" stext" style="font-size: 25px; cursor: pointer;" onclick="closeForm()"><i
+          class="bx bx-x"></i></div>
+    </div>
+    <hr />
+    <form class="mb-0 pb-0">
+      <div class="input-group m-2">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user inicon"></i></span>
+        <input id="text" type="text" class="form-control" name="name" placeholder="Name">
+      </div>
+      <div class="input-group m-2">
+        <span class="input-group-addon"><i class="bx bxs-envelope inicon"></i></span>
+        <input id="email" type="email" class="form-control" name="email" placeholder="Email">
+      </div>
+      <div class="input-group m-2">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock inicon"></i></span>
+        <input id="password" type="password" class="form-control" name="password" placeholder="Create Password">
+      </div>
+      <button type="button" class="btn btn-success m-2">Create</button>
+      <hr />
+      <p class="stext">Have an account? <a href="#" onclick="logopen()">sign-in</a></p>
+    </form>
+  </div>
+
+  <!-- signin form -->
+  <div id="modalLogForm" class="container-form p-2 modal-sm">
+    <div class=" d-flex justify-content-between">
+      <div class="">
+        <h4 class="m-2 pt-2">Welcome:</h4>
+      </div>
+      <div id="cross" class="stext" style="font-size: 25px; cursor: pointer;" onclick="closeForm()"><i
+          class="bx bx-x"></i></div>
+    </div>
+    <hr />
+    <form class="mb-0 pb-0">
+      <div class="input-group m-2">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user inicon"></i></span>
+        <input id="email" type="email" class="form-control" name="email" placeholder="Email">
+      </div>
+      <div class="input-group m-2">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock inicon"></i></span>
+        <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+      </div>
+      <button type="button" class="btn btn-success m-2">login</button>
+      <hr />
+      <p class="stext">New Candidate? <a href="#" onclick="signopen()">sign-up</a></p>
+    </form>
+  </div>
+
+  <!-- Top slider -->
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class='bx bxs-chevrons-up'
+      style='font-size:24px'></i></button>
+
+  <!-- about members start -->
+
+  <div class="container" id="About">
+    <h3 class="title text-center">Our Team</h3>
+    <div class="row justify-content-center box">
+      <div class="col-sm-4 border-kiri" style="background-color: #007aff;">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+
+          <div class="swiper-wrapper text-white text-center">
+            <!-- Slides start-->
+
+            <!-- Founder -->
+            <div class="swiper-slide">
+              <div class="row">
+                <div class="panel img-lavkush"></div>
+
+              </div>
+              <div class="row justify-content-center members-name">
+                <h5 class="col-sm-12">Lavkush Maurya</h5>
+                <p class="col-sm-12">Founder</p>
+              </div>
+              <div class="row d-flex m-auto">
+                <div class="col d-flex justify-content-around">
+                  <a href="#">
+                    <h5><i class='bx bxl-meta'></i></h5>
+                  </a>
+                  <a href="#">
+                    <h5><i class='bx bxl-instagram'></i></h5>
+                  </a>
+                  <a href="#">
+                    <h5><i class='bx bxl-twitter'></i></h5>
+                  </a>
+                  <a href="#">
+                    <h5><i class='bx bxl-tiktok'></i></h5>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Co-Founder -->
+            <div class="swiper-slide">
+              <div class="row">
+                <div class="panel img-taukir"></div>
+
+              </div>
+              <div class="row justify-content-center">
+                <h5 class="col-sm-12">Taukir Ahamd</h5>
+                <p class="col-sm-12">Co-Founder</p>
+              </div>
+              <div class="row d-flex m-auto">
+                <div class="col d-flex justify-content-around">
+                  <a href="#">
+                    <h5><i class='bx bxl-meta'></i></h5>
+                  </a>
+                  <a href="#">
+                    <h5><i class='bx bxl-instagram'></i></h5>
+                  </a>
+                  <a href="#">
+                    <h5><i class='bx bxl-twitter'></i></h5>
+                  </a>
+                  <a href="#">
+                    <h5><i class='bx bxl-tiktok'></i></h5>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- HR-1 -->
+            <div class="swiper-slide">
+              <div class="row">
+                <div class="panel img-kanha"></div>
+
+              </div>
+              <div class="row justify-content-center">
+                <h5 class="col-sm-12">Kanhaiya Gupta</h5>
+                <p class="col-sm-12">HRM</p>
+              </div>
+              <div class="row d-flex m-auto">
+                <div class="col d-flex justify-content-around">
+                  <!-- <a href="#">
+                    <h5><i class='bx bxl-meta'></i></h5>
+                  </a> -->
+                  <!-- <a href="#">
+                    <h5><i class='bx bxl-instagram'></i></h5>
+                  </a> -->
+                  <!-- <a href="#">
+                    <h5><i class='bx bxl-twitter'></i></h5>
+                  </a> -->
+                  <!-- <a href="#">
+                    <h5><i class='bx bxl-tiktok'></i></h5>
+                  </a> -->
+                  <a href="http://officialkanha.epizy.com" target="_blank">
+                    <h5><i class='bx bx-globe'></i></h5>
+                  </a>
+                  <a href="https://linkedin.com/in/kanhaiya-gupta-401303240" target="_blank">
+                    <h5><i class='bx bxl-linkedin'></i></h5>
+                  </a>
+                  <a href="mailto:kanhaiyaguptaksg@gmail.com" target="_blank">
+                    <h5><i class='bx bx-envelope'></i></h5>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- HR-2 -->
+            <div class="swiper-slide">
+              <div class="row">
+                <div class="panel img-avish"></div>
+
+              </div>
+              <div class="row justify-content-center">
+                <h5 class="col-sm-12">Avish Mishra</h5>
+                <p class="col-sm-12">HRM</p>
+              </div>
+              <div class="row d-flex m-auto">
+                <div class="col d-flex justify-content-around">
+                  <a href="#">
+                    <h5><i class='bx bxl-meta'></i></h5>
+                  </a>
+                  <a href="#">
+                    <h5><i class='bx bxl-instagram'></i></h5>
+                  </a>
+                  <a href="#">
+                    <h5><i class='bx bxl-twitter'></i></h5>
+                  </a>
+                  <a href="#">
+                    <h5><i class='bx bxl-tiktok'></i></h5>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <!-- slides close -->
+
+      <!-- <div class="row"> -->
+      <div class="col-sm-8 border-kanan" style="background-color: #C2FFD9;">
+        <div class="row pt-4 px-3 float-end">
+          <div class="col d-flex justify-content-center">
+            <h5 class="ms-2"><i class='bx bxs-chevron-left bx-border-circle bx-fade-left-hover kiri'></i></h5>
+
+            <h5 class="ms-2"><i class='bx bxs-chevron-right bx-border-circle bx-fade-right-hover kanan'></i></h5>
+          </div>
+        </div>
+
+        <div class="swiper">
+
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <!-- Lavkush -->
+            <div class="swiper-slide">
+              <div class="row pt-3">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10 px-3">
+                  <figure>
+                    <blockquote class="blockquote">
+                      <h1 class="text-secondary"><i class='bx-pull-left bx bxs-quote-left'></i></h1>
+                      <p>Invest in yourself, learn new skills, and watch your career soar to new heights.</p>
+                    </blockquote>
+                    <!-- <figcaption class="blockquote-footer">
+                      Someone famous in <cite title="Source Title">Source Title</cite>
+                    </figcaption> -->
+                  </figure>
+                </div>
+                <div class="col-sm-1"></div>
+              </div>
+            </div>
+
+            <!-- Taukir -->
+            <div class="swiper-slide">
+              <div class="row pt-3">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10 px-3">
+                  <figure>
+                    <blockquote class="blockquote">
+                      <h1 class="text-secondary"><i class='bx-pull-left bx bxs-quote-left'></i></h1>
+                      <p>Don't fear failures; they are the stepping stones to success and valuable learning experiences.</p>
+                    </blockquote>
+                    <!-- <figcaption class="blockquote-footer">
+                      Someone famous in <cite title="Source Title">Source Title</cite>
+                    </figcaption> -->
+                  </figure>
+                </div>
+                <div class="col-sm-1"></div>
+              </div>
+            </div>
+
+            <!-- Kanhaiya -->
+            <div class="swiper-slide">
+              <div class="row pt-3">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10 px-3">
+                  <figure>
+                    <blockquote class="blockquote">
+                      <h1 class="text-secondary"><i class='bx-pull-left bx bxs-quote-left'></i></h1>
+                      <p>Success is not a destination; it's a journey of continuous learning and growth.</p>
+                    </blockquote>
+                    <!-- <figcaption class="blockquote-footer">
+                      Someone famous in <cite title="Source Title">Source Title</cite>
+                    </figcaption> -->
+                  </figure>
+                </div>
+                <div class="col-sm-1"></div>
+              </div>
+            </div>
+
+            <!-- Avish -->
+            <div class="swiper-slide">
+              <div class="row pt-3">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10 px-3">
+                  <figure>
+                    <blockquote class="blockquote">
+                      <h1 class="text-secondary"><i class='bx-pull-left bx bxs-quote-left'></i></h1>
+                      <p>Set clear goals and work diligently towards them; progress is the bridge to achievement.</p>
+                    </blockquote>
+                    <!-- <figcaption class="blockquote-footer">
+                      Someone famous in <cite title="Source Title">Source Title</cite>
+                    </figcaption> -->
+                  </figure>
+                </div>
+                <div class="col-sm-1"></div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+  <!-- about members close -->
+
+
+  <!-- services of WorkCloud start-->
+
+  <div class="services container" id="Services">
+    <h3 class="title text-center">Our Services</h3>
+    <div class="row">
+
+      <div class="col-sm-6 video my">
+        <video height="400px" controls autoplay loop muted>
+          <source src="img/VID-20230720-WA0018.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="col-sm-6 d-flex justify-content-center">
+        <div class="service-frame">
+
+          <div class="ar1">
+            <div class="sf1">
+              <div class="arrow"><i class='bx bxs-star-half'></i></div>
+              Rating System
+            </div>
+          </div>
+
+          <div class="ar2">
+            <div class="sf2">
+              <div class="arrow"><i class='bx bx-laptop'></i></div>
+              Web Development
+            </div>
+          </div>
+
+          <div class="ar3">
+            <div class="sf3">
+              <div class="arrow"><i class='bx bx-cog'></i></div>
+              Autocad Designing
+            </div>
+          </div>
+
+          <div class="ar4">
+            <div class="sf4">
+              <div class="arrow"><i class='bx bxl-android'></i></div>
+              App Development
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- services close -->
+
+  <!-- testimonial start -->
+  <div class="container">
+    <h3 class="title text-center">What people say</h3>
+    <section class="testimonial-section" id="Testimonials">
+
+      <div class="testimonial">
+        <img src="img/user.png" alt="Testimonial Avatar">
+        <blockquote>
+          <i class='text-secondary bx bxs-quote-left' style="font-size: 30px;"></i> &emsp; WorkCloud has transformed the
+          way we collaborate and manage projects. Their tools are intuitive and highly effective. I highly recommend
+          them!
+        </blockquote>
+        <cite>- John Doe, CEO</cite>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- testimonial close -->
+
+  <!-- Career start -->
+  <div class="container career" id="Career">
+    <h3 class="title text-center">One step with WorkCloud...</h3>
+
+    <div class="row">
+      <div class="col-sm-4 d-flex justify-content-center my">
+        <img src="img/job.jpg" width="200px" alt="Career" style="box-shadow: 5px 5px 10px gainsboro;">
+      </div>
+
+      <div class="col-sm-8">
+
+        <div class="card text-center" style="box-shadow: 5px 5px 10px gainsboro;" id="rate">
+          <div class="card-header">
+            &#128512; Career Opportunities
+          </div>
+          <div class="card-body">
+            <h5 class="card-title p-2">Rating System</h5>
+            <p class="card-text" style="text-align: left;">&emsp;&emsp; This platform is very suitable for both
+              technical and non-technical candidates because here employe complete their
+              task to give the answer of many questions that are asked of many Brainly User.
+            </p>
+          </div>
+          <div class=" card-footer d-flex justify-content-around">
+            <div class=" text-muted">
+              10 openings
+            </div>
+            <div>
+              <a href="https://forms.gle/JUB1cXti7z9M4jvUA" class="btn btn-primary">Apply</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card text-center" style="box-shadow: 5px 5px 10px gainsboro;" id="vid">
+          <div class="card-header">
+            &#128512; Career Opportunities
+          </div>
+          <div class="card-body">
+            <h5 class="card-title p-2">Video Project</h5>
+            <p class="card-text" style="text-align: left;">&emsp;&emsp; This platform is very suitable for both
+              technical and non-technical candidates because here employe complete their
+              task to give the answer of many questions that are asked of many Brainly User.
+            </p>
+          </div>
+          <div class=" card-footer d-flex justify-content-around">
+            <div class=" text-muted">
+              20 openings
+            </div>
+            <div>
+              <a href="https://forms.gle/JUB1cXti7z9M4jvUA" class="btn btn-primary">Apply</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <!-- career close -->
+
+  <!-- Contact form start -->
+
+  <div class="contact" id="Contact">
+    <h3 class="title text-center">Have questions? Our team is here to help you.</h3>
+    <form class="cf">
+      <div class="half left cf">
+        <input type="text" id="input-name" placeholder="Name"><br />
+        <input type="email" id="input-email" placeholder="Your email address"><br />
+        <input type="text" id="input-subject" placeholder="Subject"><br />
+      </div>
+      <div class="half right cf">
+        <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+      </div><br />
+      <input type="submit" value="Submit" id="input-submit">
+    </form>
+  </div>
+
+  <!-- Contact form close -->
+
+  <!-- footer start -->
+
+  <div class="footer">
+    <div class="row">
+      <div class="col-sm-4 img">
+        <img class="img1" src="img/wc.jpg" alt="">
+        <img class="img2" src="img/ajadi.png" alt="">
+        <img class="img3" src="img/startup.png" alt="">
+      </div>
+      <div class="col-sm-4 justify-content-center d-flex links">
+        <ul style="list-style: none;">
+          <li class="lk"><a href="#" class="privacy-link">Privacy & Policy</a></li>
+
+          <div id="privacy-frame">
+            <button id="close-privacy"><i class="bx bx-x"> </i></button>
+            <h3 style="border-bottom: 1px solid black; text-decoration: none; color: black;">Privacy & Policy</h3>
+            <p style="font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac justo
+              elit. Nulla facilisi. Integer id arcu ligula.</p>
+          </div>
+
+          <li class="lk"><a href="#" class="condition-link">Terms & Conditions</a></li>
+
+          <div id="condition-frame">
+            <button id="close-condition"><i class="bx bx-x"> </i></button>
+            <h3 style="border-bottom: 1px solid black; text-decoration: none; color: black;">Terms & Conditions</h3>
+            <p style="font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac justo
+              elit. Nulla facilisi. Integer id arcu ligula.</p>
+          </div>
+
+          <li class="lk"><a href="#About">About me</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4 justify-content-center d-flex links">
+        <div class="row d-flex justify-content-around">
+          <ul style="list-style: none;">
+            <li>
+              <p style="color: #C2FFD9;"><u>Stay Connected:</u></p>
+            </li>
+            <li class="col-sm-3 my">
+              <a style="text-decoration: none; color: black;"
+                href="https://instagram.com/workcloud_lt?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D">
+                <div class="icon"><i class='bx bxl-instagram'></i></div>
+              </a>
+            </li>
+            <li class="col-sm-3 my">
+              <a style="text-decoration: none; color: black;" href="https://wa.me/917081676773">
+                <div class="icon"><i class='bx bxl-whatsapp'></i></div>
+              </a>
+            </li>
+            <li class="col-sm-3 my">
+              <a style="text-decoration: none; color: black;" href="https://www.linkedin.com/in/work-cloud-92b944278">
+                <div class="icon"><i class='bx bxl-linkedin'></i></div>
+              </a>
+            </li>
+            <li class="col-sm-3 my">
+              <a style="text-decoration: none; color: black;"
+                href="https://www.facebook.com/profile.php?id=100093416955924">
+                <div class="icon"><i class='bx bxl-facebook'></i></i></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div class="row line"></div>
+    <div class="row p-2 justify-content-center text-center text-white">
+      <h6>Copyrights © 2023 WorkCLOUD Solutioins & Services Pvt. Ltd. All Rights Reserved.</h6>
+    </div>
+  </div>
+
+  <!-- footer close -->
+
+</body>
+
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/faculty.js"></script>
+
+</html>

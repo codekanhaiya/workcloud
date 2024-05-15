@@ -1,0 +1,119 @@
+.title{
+    margin:2rem
+}
+
+
+body {
+    background-color: #ecc5fb;
+}
+
+a {
+    color: white;
+}
+
+
+.panel {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.border-kiri {
+    border-radius: 15px 0 0 15px;
+}
+
+.members-name p, h5{
+    margin: 2px;
+}
+
+.members-name ul li{
+    list-style: none;
+}
+
+.border-kanan {
+    border-radius: 0 15px 15px 0;
+}
+
+
+.img-lavkush {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url("../img/Lavkush.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: ease 0.5;
+}
+
+.img-taukir {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url("../img/Taukir.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: ease 0.5;
+}
+
+.img-kanha {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url("../img/Kanhaiya.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: ease 0.5;
+}
+
+.img-avish {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url("../img/Avish.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: ease 0.5;
+}
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    opacity: 1;
+    background: rgba(255, 40, 40, 1);
+    transition: ease 0.5s;
+}
+
+.swiper-pagination-bullet-active {
+    width: 25px;
+    height: 8px;
+    border-radius: 2px;
+    background: #0042b0;
+}
+
+.kiri:hover {
+    color: #fff;
+    background: #0042b0;
+}
+
+.kanan:hover {
+    color: #fff;
+    background: #0042b0;
+}
+
+@media (max-width: 575.98px) {
+    .border-kiri {
+        border-radius: 15px 15px 0 0;
+    }
+
+    .border-kanan {
+        border-radius: 0 0 15px 15px;
+    }
+}
